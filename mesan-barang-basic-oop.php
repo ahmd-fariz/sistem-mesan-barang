@@ -66,7 +66,7 @@ class laptop extends Produk
 }
 
 $produk1 = new Produk("Realme 12", "Realme", 1500000);
-$produk2 = new Produk("arcer n5", "acer", 12000000);
+$produk2 = new Produk("acer n5", "acer", 12000000);
 echo "Jual hp : " . $produk1->getNama();
 echo "<br>";
 echo "Harga : " . $produk1->getHarga();
@@ -96,12 +96,12 @@ echo "<hr>";
         $nama = $_POST['nama'];
         $slk = $_POST['slk'];
         if ($slk == "a") {
-            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk1->getNama();
+            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk1->getNama() . "<br> Harga : " . $produk1->getHarga();
+            echo "<br> <input type='submit' name='sbmt' value='Lanjutkan pembayaran'>";
         } else {
-            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama();
+            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama() . "<br Harga  : >" . $produk2->getHarga();
         }
     }
-
     ?>
 </body>
 
