@@ -99,7 +99,8 @@ echo "<hr>";
             echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk1->getNama() . "<br> Harga : " . $produk1->getHarga();
             echo "<br> <input type='submit' name='sbmt' value='Lanjutkan pembayaran'>";
         } else {
-            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama() . "<br Harga  : >" . $produk2->getHarga();
+            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama() . "<br> Harga : " . $produk2->getHarga();
+            echo "<br> <input type='submit' name='sbmt' value='Lanjutkan pembayaran'>";
         }
     }
     ?>
