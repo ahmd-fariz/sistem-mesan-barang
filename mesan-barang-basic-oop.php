@@ -3,6 +3,7 @@ class Produk
 {
     private $nama,
         $merek,
+        $diskon = 0,
         $harga;
 
     public function __construct($nama, $merek, $harga)
@@ -32,6 +33,16 @@ class Produk
         return $this->merek;
     }
 
+    public function setDiskon($diskon)
+    {
+        $this->diskon = $diskon;
+    }
+
+    public function getDiskon()
+    {
+        return $this->diskon;
+    }
+
     public function setHarga($harga)
     {
         $this->harga = $harga;
@@ -39,7 +50,7 @@ class Produk
 
     public function getHarga()
     {
-        return $this->harga;
+        return $this->harga - ($this->harga * $this->diskon / 100);
     }
 
     public function getInfoProduk()
@@ -75,6 +86,7 @@ echo "Jual Laptop : " . $produk2->getNama();
 echo "<br>";
 echo "Harga : " . $produk2->getHarga();
 echo "<hr>";
+$produk2->setDiskon(20);
 ?>
 
 <html lang="en">
@@ -96,11 +108,11 @@ echo "<hr>";
         $nama = $_POST['nama'];
         $slk = $_POST['slk'];
         if ($slk == "a") {
-            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk1->getNama() . "<br> Harga : " . $produk1->getHarga();
+            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk1->getNama() . "<br> Harga : " . $produk1->getHarga() . "<br> anda dapat potongan harga sebesar : " . $produk1->getDiskon();
             echo "<br> <input type='submit' name='sbmt' value='Lanjutkan pembayaran'>";
         } else {
-            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama() . "<br> Harga : " . $produk2->getHarga();
-            echo "<br> <input type='submit' name='sbmt' value='Lanjutkan pembayaran'>";
+            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama() . "<br> Harga : " . $produk2->getHarga() . "<br> anda dapat potongan harga sebesar : " . $produk2->getDiskon();
+            echo "<br> <input type='submit' name='sbmt2' value='Lanjutkan pembayaran'>";
         }
     }
     ?>
