@@ -108,10 +108,10 @@ $produk2->setDiskon(20);
         $nama = $_POST['nama'];
         $slk = $_POST['slk'];
         if ($slk == "a") {
-            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk1->getNama() . "<br> Harga : " . $produk1->getHarga() . "<br> anda dapat potongan harga sebesar : " . $produk1->getDiskon();
+            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk1->getNama() . "<br> Harga : " . $produk1->getHarga() . "<br> anda dapat potongan harga sebesar : " . $produk1->getDiskon() . "%";
             echo "<br> <input type='submit' name='sbmt' value='Lanjutkan pembayaran'>";
         } else {
-            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama() . "<br> Harga : " . $produk2->getHarga() . "<br> anda dapat potongan harga sebesar : " . $produk2->getDiskon();
+            echo "Nama anda : " . $nama . "<br> Produk yang anda pesan adalah : " . $produk2->getNama() . "<br> Harga : " . $produk2->getHarga() . "<br> anda dapat potongan harga sebesar : " . $produk2->getDiskon() . "%";
             echo "<br> <input type='submit' name='sbmt2' value='Lanjutkan pembayaran'>";
         }
     }
